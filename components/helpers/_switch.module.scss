@@ -1,0 +1,65 @@
+@import"../../styles/variables.scss";
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    margin: 2% 0;
+    border-radius: 50px;
+    background-color: $orange;
+  
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: .1em;
+      left: .2em;
+      width: 1em;
+      height: 1em;
+      background-color: white;
+      transition: transform .2s ease;
+      border-radius: 50%;
+    }
+  
+    &.on {
+      background-color: $orange;
+  
+      .slider {
+        transform: translateX(1em);
+      }
+    }
+  
+    &.off {
+      background-color: $toggle-color;
+  
+      .slider {
+        transform: translateX(0);
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      width: 2em;
+      height: .8em;
+  
+      .slider {
+        display: flex;
+        width: .5em;
+        height: .5em;
+      }
+      &.on {
+        background-color: #2196F3;
+    
+        .slider {
+          transform: translateX(1em);
+        }
+      }
+    
+      &.off {
+        background-color: #ccc;
+    
+        .slider {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  

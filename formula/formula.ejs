@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>file_1674333934753</title>
+    <style type="text/css" 
+    >
+    /* @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap"); */
+    @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+    * {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 12px;
+    }
+    .pd-40 {
+      padding: 0 40px;
+    }
+    .pd-20{
+      padding: 0 20px;
+    }
+    .pt-30{
+      padding-top: 30px;
+    }
+
+    .title_container {
+      width: 100%;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -webkit-box-align: center;
+      /* background: red; */
+      /* padding: 0 20px; */
+    }
+
+ 
+    .vet_data {
+      /* margin: 5px 0; */
+      display: block;
+      /* background-color: aliceblue; */
+    }
+    .hr {
+      border: 1px solid;
+      margin: 10px 2px;
+    }
+    .data_container {
+      display: -webkit-flex;
+      /* background-color: aqua; */
+      width: 100%;
+      /* padding: 40px; */
+    }
+    .block_left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      border-radius: 15px;
+      margin: 25px 10px 25px 0;
+    }
+
+    .block_1 {
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 10px;
+      height: auto;
+    }
+
+    .block_2 {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 10px;
+      height: auto;
+    }
+
+    .block_right {
+      width: 50%;
+      height: 210px;
+   /*   background-color: #eee; */
+      border-radius: 15px;
+      /* margin: 0px 0 25px 10px; */
+      /* margin-bottom: 15px; */
+      padding: 20px;
+    }
+    .block_right_2 {
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 10px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .prescription_container {
+      width: 100%;
+      /* height: 40px; */
+      /* background-color: red; */
+      /* padding: 0 40px; */
+      margin: 20px 0;
+    }
+
+    .table {
+      margin: 10px 0;
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid;
+      text-align: center;
+    }
+
+    th {
+      padding: 5px;
+      border: 1px solid;
+      margin: 0;
+    }
+    td {
+      padding: 5px;
+      border: 1px solid;
+      margin: 0;
+    }
+
+    .treatment_container {
+      width: 100%;
+      /* height: 40px; */
+      /* padding: 0 40px; */
+      margin: 20px 0;
+      /* background-color: bisque; */
+    }
+    .treatment_container > div {
+      display: flex;
+    }
+    .treatment_container > h4 {
+      margin: 20px 20px 20px 0;
+    }
+
+    .warning {
+      font-weight: bold;
+      color: default;
+    }
+    .warning > span {
+      font-weight: normal;
+    }
+
+    .singature_container {
+      padding: 0 40px;
+    }
+    .signature {
+      font-family: "Kaushan Script", cursive;
+    }
+    .singature_container > p {
+      font-weight: bolder;
+      /* color: red; */
+    }
+    .singature_text {
+      font-weight: bolder;
+    }
+    .singature_text > span {
+      font-weight: lighter;
+    }
+    .footer {
+      margin: 20px 0;
+      padding: 0 40px;
+      text-align: end;
+    }
+    .footer > p {
+      margin: 10px 0;
+    }
+    .bolder {
+      font-weight: bold;
+    }
+    .light {
+      font-weight: lighter;
+    }
+    .block {
+      display: block;
+      background-color: red;
+    }
+    .mb {
+      margin-bottom: 8px;
+    }
+    .mb_delivery_p {
+      margin-bottom: 4px;
+    }
+    .m-rl{
+      margin: 0 20px;
+    }
+    .d_block {
+      display: block;
+    }
+    .vet_brand{
+      width: 150px;
+    }
+    .klean_brand{
+      width: 200px;
+      /* padding-top: 20px; */
+      /* padding-right: 15px; */
+    }
+    .brand_text{
+      margin-top: 5px;
+      display: inline-block;
+      font-size: 7px;
+      font-weight: 700;
+    }
+
+  </style>
+
+  <div class="title_container pd-40 pt-30">
+    <div class="vet_title_container">
+      <p class="vet_data">Dr: <%= register.veterinary.name %> <%= register.veterinary.surname %></p>
+      <p class="vet_data"><%= register.veterinary.department %>, <%= register.veterinary.location %></p>
+      <p class="vet_data"><%= register.veterinary.neighborhood %>, <%= register.veterinary.address %></p>
+    </div>
+    <!-- <div class="vet_brand m-rl">
+      <img 
+      src="data:image/png;base64,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"
+    />
+    </div> -->
+    <div class="klean_brand">
+      <img 
+        src="data:image/png;base64,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"
+      />
+      <p class="brand_text">CAMBIANDO LA MEDICINA, CAMBIAMOS VIDAS</p>
+    </div>
+  </div>
+  <hr class="hr" />
+
+
+  <div class="data_container pd-40">
+    <div class="block_left">
+      <div class="block_1">
+        <p class="bolder mb" style="font-weight: bolder">
+          Nombre del paciente:
+          <span class="light"><%= register.pet.name %></span> 
+          <span class="light"><%= register.owner.surname %></span>
+        </p>
+        <p class="bolder mb">
+          Edad: <span class="light"><%= register.pet.age %></span>
+        </p>
+        <p class="bolder mb">
+          Peso: <span class="light"><%= register.pet.weight %></span>
+        </p>
+        <p class="bolder mb">
+          Raza: <span class="light"><%= register.pet.breed %></span>
+        </p>
+        <p class="bolder mb">
+          Sexo: <span class="light"><%= register.pet.sex %></span>
+        </p>
+      </div>
+      <div class="block_2">
+        <p class="bolder mb">
+          M.D <span class="light"><%= register.veterinary.name %> <%= register.veterinary.surname %></span>
+        </p>
+        <p class="bolder mb">
+          No. Prescripción: <span class="light"> <%= prescription.uniqueId %></span>
+        </p>
+        <p class="bolder mb">
+          No. Historia Clinica: <span class="light">   HC - <%= prescription.uniqueId %></span>
+        </p>
+        <p class="bolder mb">
+          Fecha de prescripción: <span class="light"><%= time %></span>
+        </p>
+        <p class="bolder mb">Vigencia: <span class="light">30 días</span></p>
+        <p class="bolder mb">
+          Tratamiento: <span class="light"><%= prescription.treatment %></span>
+        </p>
+        <p class="bolder mb">
+          Unidades:
+          <span class="light"><%= register.consultation.units %></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="block_right">
+      <div class="block_right_2">
+        <p class="bolder mb">
+          Nombre del propietario:
+          <span class="light"><%= register.owner.name %>, <%= register.owner.surname %></span>
+        </p>
+        <p class="bolder mb">
+          Identificación del propietario:
+          <span class="light"><%= register.owner.id %></span>
+        </p>
+        <p class="bolder mb">
+          Telefonos: <span class="light"><%= register.owner.telephone %></span>
+        </p>
+        <p class="bolder mb">
+          Departamento:<span class="light"><%= register.owner.department %></span>
+        </p>
+        <p class="bolder mb">
+          Ciudad: <span class="light"><%= register.owner.location %></span>
+        </p>
+        <p class="bolder mb">
+          Dirección: <span class="light"><%= register.owner.address %></span>
+        </p>
+        <p class="bolder mb">
+          Barrio: <span class="light"><%= register.owner.neighborhood %></span>
+        </p>
+        <p class="bolder mb">
+          Email: <span class="light"><%= register.owner.email %></span>
+        </p>
+      </div>
+      
+
+       <div class="block_right_2">
+        <p class="bolder mb" style="font-weight: bolder">
+         <em>Datos del envio</em>
+          <hr >
+        </p>
+       <p class="mb_delivery_p"></p>
+        <p class="bolder mb_delivery_p">
+          Nombre: <span class="light"><%= register.deliveryAddress.name %></span>
+        </p>
+        <p class="bolder mb_delivery_p">
+          Celular: <span class="light"><%= register.deliveryAddress.telephone %></span>
+        </p>
+        <p class="bolder mb_delivery_p">
+          Departamento: <span class="light"><%= register.deliveryAddress.department %></span>
+        </p>
+        <p class="bolder mb_delivery_p">
+          Ciudad: <span class="light"><%= register.deliveryAddress.location %></span>
+        </p>
+        <p class="bolder mb_delivery_p">
+          Barrio: <span class="light"><%= register.deliveryAddress.neighborhood %></span>
+        </p>
+        <p class="bolder mb_delivery_p">
+          Dirección: <span class="light"><%= register.deliveryAddress.address %></span>
+        </p>
+        <p class="bolder mb_delivery_p">
+          Cédula: <span class="light"><%= register.deliveryAddress.id %></span>
+        </p>
+       
+        
+
+        
+      </div> -
+    </div>
+  </div>
+</div>
+  <div class="prescription_container pd-40">
+    <h4>Presentación de Klean-Vet® prescrita</h4>
+    <table class="table">
+      <thead>
+        <th>Concentración</th>
+        <th>Presentacion</th>
+        <th>Duración del tratamiento</th>
+        <th>Cantidad</th>
+      </thead>
+      <tbody>
+        <td><%= prescription.concentration %></td>
+        <td class="bolder"><%= prescription.presentation %></td>
+        <!-- <%= prescription.treatment %> -->
+        <td class="bolder">30 días</td>
+        <td class="bolder">Unidades <%= register.consultation.units %></td>
+      </tbody>
+    </table>
+  </div>
+  <div class="treatment_container pd-40">
+    <h2 class="mb">Indicaciones del veterinario</h2>
+    <div>
+      <p class="bolder">Patología: <span class="light"><%= prescription.diagnostic %></span></p>
+      <p class="bolder">Dosificación: <span class="light">Cada doce (12) horas</span></p>
+    </div>
+    <table class="table">
+      <thead>
+        <th>Semana 1</th>
+        <th>Semana 2</th>
+        <th>Semana 3</th>
+        <th>Semana 4</th>
+      </thead>
+      <tbody>
+        <td><%= prescription.week1 %></td>
+        <td><%= prescription.week2 %></td>
+        <td><%= prescription.week3 %></td>
+        <td><%= prescription.week4 %></td>
+      </tbody>
+    </table>
+    <p class="bolder">
+      Advertencia
+      <span class="light"
+        >Existen pacientes los cuales presentan alta sensibilidad a la molecula del cannabidiol
+        (CBD) y estos le pueden generar hiperactividad. Así como otros pacientes han presentado hipersensibilidad a los
+        componentes del producto como son el cannabidiol (CBD) tetrahidrocannabinol (THC) o al aceite de ajonjolí. De
+        presentarse alguna de estas sintomatologías debe suspenderse el tratamiento y comunicarse con el médico veterinario
+        inmediatamente. Para mayor información revisar nuestro sitio web www.klean-vet.com.</span
+      >
+    </p>
+  </div>
+  <div class="pd-40">
+    <p class="signature"><%= register.veterinary.name %>, <%= register.veterinary.surname %></p>
+    <p class="bolder">
+      MD <span class="light"><%= register.veterinary.name %> , <%= register.veterinary.surname %></span>
+    </p>
+    <p class="bolder">
+      TP <span class="light"><%= register.veterinary.card %></span>
+    </p>
+    <p class="bolder">
+      Cédula <span class="light"><%= register.veterinary.id %></span>
+    </p>
+    <p class="bolder">
+      Correo <span class="light"> <%= register.veterinary.email %></span>
+    </p>
+    <p class="bolder">
+      Celular <span class="light"> <%= register.veterinary.telephone %></span>
+    </p>
+  </div>
+  <div class="footer pd-40">
+    
+    <hr class="hr" />
+    <p><strong>www.klean-vet.com</strong></p>
+  </div>
+</html>

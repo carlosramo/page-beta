@@ -1,0 +1,80 @@
+.card {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: row;
+}
+
+.letter {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.owner {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.phone {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0;
+}
+.payment {
+  font-size: 14px;
+  color: #ff8000;
+  margin-bottom: 0;
+}
+
+.buttonsContainer {
+  flex-direction: row;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.downloadBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff8000;
+  height: 44px;
+  font-size: 14px;
+  padding: 20px; 
+  border: none;
+  border-radius: 5px;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+
+.payBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: #2bd5ca;
+  color: #f9f9f9;
+  padding: 20px;
+  height: 44px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

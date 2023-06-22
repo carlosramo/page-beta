@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.results {
+  flex: 1;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.search input {
+  flex: 1;
+  /* background: rgb(10, 10, 10); */
+  padding: 3px;
+  border-radius: 5px;
+  /* color: silver; */
+}

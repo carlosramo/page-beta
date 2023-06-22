@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+.link{
+border: none;
+margin: 0 0 20px 0;
+color: $blue;
+&:hover{
+    border: none;
+    background: none;
+    cursor: pointer;
+    transform: scale(1.05);
+    color: $orange;
+}
+}

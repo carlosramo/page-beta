@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<body class="">
+  <div style="
+        display: flex;
+        border-bottom: 2px solid black;
+        justify-content: space-between;
+      ">
+    <h1>ESTA PRESCRIPCION ES UNA PRUEBA Y NO TIENE VALOR MEDICO</h1>
+    <div style="">
+      <div>
+        <%= register.veterinary.name %>
+      </div>
+      <div>
+        <%= register.veterinary.adress %>
+      </div>
+      <div>
+        <%= register.veterinary.location %>
+      </div>
+      <div>
+        <div>
+          <div>env</div>
+          <%= register.veterinary.email %>
+        </div>
+        <div style="min-width: 200px">
+          <img src="./public/Bitcoin.png" />
+          <div>Veterinario aliado</div>
+        </div>
+      </div>
+      <div>M.D. Carlos Andres</div>
+      <div>No. Prescripción 2023 - [PENDIENTE]</div>
+      <div>No. Historia Clinica HC- [PENDIENTE]</div>
+      <h4>PACIENTE</h4>
+      <div>Nombre paciente:
+        <%= register.pet.name %>
+      </div>
+      <div>Peso:
+        <%= register.pet.weight %>
+      </div>
+      <div>Edad:
+        <%= register.pet.age %>
+      </div>
+      <div>Raza:
+        <%= register.owner.breed %>
+      </div>
+      <div>Sexo: Hembra</div>
+      <div>Identificación Propietario:
+        <%= register.owner.id %>
+      </div>
+      <h4>PROPIETARIO</h4>
+      <div>Nombre Propietario:
+        <%= register.owner.name %>
+      </div>
+      <div>Email:
+        <%= register.owner.email %>
+      </div>
+      <div>Telefonos:
+        <%= register.owner.telephone %>
+      </div>
+      <div>Municipio:
+        <%= register.owner.location %>
+      </div>
+      <div>Direccion:
+        <%= register.owner.direction %>
+      </div>
+      <div>Fecha de prescripción:
+        <%= time %>
+      </div>
+      <div>Barrio xxxxxxx</div>
+      <div>Barrio xxxxxxx</div>
+      <div>Departamento: Valle del Cauca</div>
+      <h4>CONSULTA</h4>
+      <div>Diagnostico:
+        <%= register.consultation.diagnostic %>
+      </div>
+      <div>Unidades:
+        <%= register.consultation.units %>
+      </div>
+      <h4>PRESCRIPCION</h4>
+      <div>No. Prescripción 2023 -21465</div>
+      <div>Vigencia: 30 días</div>
+      <b>Concentracion</b>
+      <div>
+        <%= prescription.concentration%>
+      </div>
+      <b>Presentacion</b>
+      <div>
+        <%= prescription.presentation%>
+      </div>
+      <b>Tratamiento</b>
+      <div>
+        <%= prescription.treatment%>
+      </div>
+      <b>Cant</b>
+      <div></div>
+      <b>Indicaciones</b>
+      <div></div>
+      <b>Patologia</b>
+      <div>Inflamacion</div>
+      <b>Dosis</b>
+      <div>[PENDIENTE] veces al día</div>
+      <b></b>
+      <b>Semana 1</b>
+      <div>
+        <%= prescription.week1 %>
+      </div>
+      <b>Semana 2</b>
+      <div>
+        <%= prescription.week2 %>
+      </div>
+      <b>Semana 3</b>
+      <div>
+        <%= prescription.week3 %>
+      </div>
+      <b>Semana 4</b>
+      <div>
+      </div>
+      <b>Advertencia</b>
+      <div>
+        Pacientes con historia de hipersensibilidad a los componentes del producto
+        como son el cannabidiol (CBD) tetrahidrocannabinol (THC) o al aceite de
+        ajonjolí. Advertencias y precauciones: Para mayor información revisar
+        nuestro sitio web www.klean-vet.com
+      </div>
+      <b>Carlos Andres </b>
+      <div>MD Carlos Andres</div>
+      <div>TP 43111</div>
+      <b>Cédula</b>
+      <div>1.144.059.057</div>
+      <div>3013219213</div>
+      <div>LAPCC-Ver-2022</div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+@import "../styles//variables.scss";
+@import '../styles/mixins';
+
+.form_container {
+ @include form_new;
+  .profile_title {
+    display: flex;
+    align-items: center;
+    padding: 1% 1%;
+    background-color: $light;
+    .span_link {
+      display: block;
+      font-weight: 500;
+      margin-left: 1%;
+    }
+    .arrow_icon {
+      @include icons;
+      color: orange;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 60vw;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 15px auto;
+    background-color: $grey;
+    border-radius: 30px;
+    animation: form_trantision 0.7ms ease-in-out;
+    animation-duration: 250ms;
+    .vet_title {
+      margin: 30px 0px 15px 0px;
+    }
+
+    .img_profile_icon {
+      margin-bottom: 35px;
+      
+    }
+
+    .profile_img {
+      // border-radius: 50rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    
+    .block_container {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      margin-bottom: 3%;
+      justify-content: space-around;
+      //  background-color:yellow;
+
+      .block_left,.block_right{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        .input_label {
+          display: inline-block;
+          font-size: 0.8rem;
+           margin: 10px 0;
+        }
+        .input_field {
+           border: none;
+          flex-wrap: wrap;
+          // width: 98%;
+          border-radius: 2rem;
+          padding: 10px;
+          // background-color: red;
+        }
+      }
+    }
+    .buttons_container {
+      @include buttons_container($w:50%);
+      .submit {
+        @include buttons($hover:$orange);
+      }
+      
+      .cancel {
+        @include buttons($bg-color:$dark-grey);
+
+        &:hover {
+          cursor: pointer;
+          background-color: $red;
+        }
+      }
+    }
+  }
+
+  .close {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  .close:hover {
+    font-weight: 900;
+  }
+
+  @keyframes form_trantision {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .close_icon {
+    @include icons;
+  }
+ 
+  .error {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 9px;
+    color: red;
+  }
+
+  @media all and (min-width: 333px) and (max-width: 860px) {
+    @include form_new;
+    .profile_title {
+      .span_link {
+        display: none;
+      }
+     
+    }
+
+    .form {
+      margin: 5% 0 5% 5%;
+      width: 90vw;
+      height: auto;
+      .vet_title {
+        font-size: 1.2rem;
+      }
+      .profile_img {
+        width: 5em;
+        max-width: 4em;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .block_container {
+        flex-direction: column;
+          .block_left, .block_right{
+            width: 100%;
+            .input_label {
+              // display: none;
+            }
+            .input_field {
+              min-width: 100%;
+              margin: 0.4rem 0;
+            }
+          }
+        
+      }
+      .buttons_container {
+        @include buttons_container($w:100%);
+        .submit {
+          @include buttons($bg-color: $orange);
+        }
+        .cancel {
+          @include buttons($bg-color: $primary-color);
+        }
+      }
+    }
+  }
+}

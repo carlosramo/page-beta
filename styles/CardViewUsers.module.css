@@ -1,0 +1,29 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .owner {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .phone {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
+  }
